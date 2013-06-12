@@ -64,7 +64,7 @@ melody = \relative c' {
  
  \mark \default
  \repeat volta 2 {
- d4 f e4. d8   d8 cis4 d8 e c a4   r a gis4. a8  bes4 r8 a gis a bes4  \break
+ d4 f e4. d8   d8 cis4 d8 e cis a4   r a gis4. a8  bes4 r8 a gis a bes4  \break
  r4 a g f   a4 r8 g fis g a4   r4 g f4. e8   }
  \alternative { {g4 f r8 d'4 d8} {d,4 r8 gis a gis a4} } \break
  
