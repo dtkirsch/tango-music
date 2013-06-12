@@ -2,7 +2,7 @@
  title = "Felicia" 
  subtitle = "[Subtitle]" 
  composer = "Enrique Saborido" 
- tagline = "--->: \italic arrastre"  % blank footer
+ tagline = "--->: arrastre"  % blank footer
 }
 
 \layout { indent = 0.0\cm }
