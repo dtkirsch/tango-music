@@ -7,6 +7,7 @@
 }
 
 songKey = \key d \minor
+emptyVerse = \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}s1}
 
 counter = \relative \melodyRelative {
   \songKey
@@ -29,15 +30,15 @@ counters = <<
 
 effects = \relative \melodyRelative {
   \teeny
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}s1}
+  \emptyVerse
   \repeat volta 2 {s1 s1 s1\arr
     \hideNotes d8 \glissando \zigzag d'1. \glissando  d,,8   c4  \unHideNotes 
 s1 s1\arr} \alternative {{s1}{s1}}
 }
 
 fill = \relative \melodyRelative {
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}{s1}}
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}{s1}}
+  \emptyVerse
+  \emptyVerse
   \repeat volta 2 {s1    s4 r8 fis, g fis g4    s1   s4 r8 e f e f4
   s1    s4 r8 a, cis e a4   s1 } \alternative { {s1} { r8 d8 c bes a g f e} }
 }
@@ -56,8 +57,7 @@ melody = \relative \melodyRelative {
 
  % Melody here
  
- % http://lilypond.org/doc/v2.12/Documentation/user/lilypond/Bars#Rehearsal-marks
- \mark \default
+ \mark \default # Section A
  
  \repeat volta 2 {
  {r8\p\< d a f   r d' a f   r bes a g   r bes a g   r cis a g   r cis a g   r d' a f   r d' a f\f}
@@ -66,13 +66,13 @@ melody = \relative \melodyRelative {
  \alternative { {d8 d'\sp c bes a g f e} {d4 r r8 d4 d8} }
  \break
  
- \mark \default
+ \mark \default # Section B
  \repeat volta 2 {
  \slurUp d4( f e4.) d8   d8 cis4 d8 e cis a4   r a gis4. a8  bes4 r8 a gis a bes4  \break
  r4 a g f   a4 r8 g fis g a4   r4 g f4. e8   }
  \alternative { {g4 f r8 d'4 d8} {d,4 r8 gis a gis a4} } \break
  
- \mark \default
+ \mark \default # Section C
  \repeat volta 2 {
  r4 gis a bes   g r4 r r   r4 fis g a   f r r r
  \break
@@ -99,8 +99,8 @@ pianoUp = \relative c' {
   \songKey
   \time 4/4
 
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}{s1}}
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}{s1}}
+  \emptyVerse
+  \emptyVerse
   \repeat volta 2 {
     <d f a>4 <d f gis> <d f a> <d f bes> <cis e g a> r2. 
     \chordmode{ a,4:7 a,:6 a,:7 a,:8^7 d4:m/a r2.}
@@ -117,8 +117,8 @@ pianoDown = \relative c, {
   \songKey
   \time 4/4
 
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}{s1}}
-  \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}{s1}}
+  \emptyVerse
+  \emptyVerse
   \repeat volta 2 {
     r8 <d d'> r <d d'> r <d d'> r d \glissando a4 r2.
     r8 <a a'> r <a a'> r <a a'> r a \glissando d4 r2.
