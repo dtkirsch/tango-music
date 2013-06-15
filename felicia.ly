@@ -9,13 +9,6 @@
 songKey = \key d \minor
 emptyVerse = \repeat volta 2 {s1 s1 s1 s1 s1 s1 s1} \alternative {{s1}s1}
 
-counter = \relative \melodyRelative {
-  \songKey
-  \repeat volta 2 {
-  f2 e4 d    bes1    a2 cis2     d8 cis d e f2 
-  f2 g8 f e d   bes1   a2 cis2} \alternative {{d1} {d4 r2.}}
-}
-
 fresedoCounter = \relative \melodyRelative {
   \songKey
   \repeat volta 2 {
@@ -24,12 +17,23 @@ fresedoCounter = \relative \melodyRelative {
 }
 
 counters = <<
-  \new Voice = "counter" { \clef \melodyClef \transpose \transposeTo c \counter}
-  \new Voice = "fresedoCounter" { \clef \melodyClef \transpose \transposeTo c \fresedoCounter}
+  \new Voice = "counter" { \clef \melodyClef \transpose \transposeTo c 
+			   { \relative \melodyRelative {
+			     \songKey
+			     \repeat volta 2 {
+			       f2 e4 d    bes1    a2 cis2     d8 cis d e f2 
+			       f2 g8 f e d   bes1   a2 cis2} \alternative {{d1} {d4 r2.}}
+			     }}}
+  \new Voice = "fresedoCounter" { \clef \melodyClef \transpose \transposeTo c 
+				  { \relative \melodyRelative {
+				    \songKey
+				    \repeat volta 2 {
+				      d2 a4 f    e1    e'4. cis8 \times 2/3 {bes4 a g}     f1
+				      d4. e8 \times 2/3 {f4 g a}   bes8 e,2. d8   cis2 a2 } \alternative {{f1} {d4 r2.}}
+				  }}}
 >>
 
 effects = \relative \melodyRelative {
-  \teeny
   \emptyVerse
   \repeat volta 2 {s1 s1 s1\arr
     \hideNotes d8 \glissando \zigzag d'1. \glissando  d,,8   c4  \unHideNotes 
@@ -57,7 +61,7 @@ melody = \relative \melodyRelative {
 
  % Melody here
  
- \mark \default # Section A
+ \mark \default % Section A
  
  \repeat volta 2 {
  {r8\p\< d a f   r d' a f   r bes a g   r bes a g   r cis a g   r cis a g   r d' a f   r d' a f\f}
@@ -66,13 +70,13 @@ melody = \relative \melodyRelative {
  \alternative { {d8 d'\sp c bes a g f e} {d4 r r8 d4 d8} }
  \break
  
- \mark \default # Section B
+ \mark \default % Section B
  \repeat volta 2 {
  \slurUp d4( f e4.) d8   d8 cis4 d8 e cis a4   r a gis4. a8  bes4 r8 a gis a bes4  \break
  r4 a g f   a4 r8 g fis g a4   r4 g f4. e8   }
  \alternative { {g4 f r8 d'4 d8} {d,4 r8 gis a gis a4} } \break
  
- \mark \default # Section C
+ \mark \default % Section C
  \repeat volta 2 {
  r4 gis a bes   g r4 r r   r4 fis g a   f r r r
  \break
