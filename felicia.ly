@@ -40,12 +40,12 @@ effects = \relative \melodyRelative {
 s1 s1\arr} \alternative {{s1}{s1}}
 }
 
-fill = \relative \melodyRelative {
+fill = \transpose \transposeTo c { \relative \melodyRelative {
   \emptyVerse
   \emptyVerse
   \repeat volta 2 {s1    s4 r8 fis, g fis g4    s1   s4 r8 e f e f4
   s1    s4 r8 a, cis e a4   s1 } \alternative { {s1} { r8 d8 c bes a g f e} }
-}
+}}
 \addQuote "fill" { \fill }
 
 melody = \relative \melodyRelative {
@@ -127,7 +127,7 @@ pianoDown = \relative c, {
     r8 <d d'> r <d d'> r <d d'> r d \glissando a4 r2.
     r8 <a a'> r <a a'> r <a a'> r a \glissando d4 r2.
     r8 <d d'> r <d d'> r <d d'> r d \glissando a4 r2.
-    a'4 g f e} \alternative {{g r2.}{d4 r2.}}
+    a'4 g f e} \alternative {{d r2.}{d4 r2.}}
 
 }
 
