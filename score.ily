@@ -9,6 +9,9 @@
  
  \new Voice = "effects" { \relative \melodyRelative \effects}
  >>
+ \new Staff <<
+ \new Voice = "rhythm" { \clef percussion \improvisationOn \relative c' \rhythm}
+ >>
 
  \new PianoStaff <<
     \set PianoStaff.instrumentName = #"Piano  "

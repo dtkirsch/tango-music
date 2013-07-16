@@ -26,3 +26,7 @@ bassMelodyRelative = c'
 #(use-modules (guile-user))
 #(format #t "Using style sheet: ~a\n" style)
 \include #style
+
+
+% blank default parts, intended to be overridden:
+rhythm = {}
