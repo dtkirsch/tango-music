@@ -18,8 +18,14 @@
     \new Staff = "pianoUp" \pianoUp
     \new Staff = "pianoDown" \pianoDown
   >>
- 
+
  \counters
+
+  \new Staff <<
+  \new Voice = "bass" {\clef bass \bass }
+  >>
+
+
 % \new Staff = "fill" { \clef bass \fill}
 % \new Staff = "effects" { \clef bass \effects}
 % \new Lyrics \lyricsto "one" \text

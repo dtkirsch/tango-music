@@ -21,7 +21,6 @@ zigzag = \once \override Glissando #'style = #'zigzag
 bassMelodyClef = bass
 bassMelodyRelative = c'
 
-
 % for transposing options at compile time
 #(use-modules (guile-user))
 #(format #t "Using style sheet: ~a\n" style)
@@ -30,3 +29,6 @@ bassMelodyRelative = c'
 
 % blank default parts, intended to be overridden:
 rhythm = {}
+bass = {}
+
+
